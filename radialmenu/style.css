@@ -1,536 +1,134 @@
-﻿@font-face {
+@font-face {
     font-family: inter;
     src: url(fonts/Inter-ExtraBold.ttf);
 }
 
-
-body{
-    overflow:hidden;
-    transform:scale(1.2)
+body {
+    overflow: hidden;
+    transform: scale(1);
+    background: transparent;
 }
 
-.main_circle{
-    width: 5.5vw;
-    height: 7.05vw;
+.circleArea {
     position: absolute;
-    top:20.35vw;
-    left:47.26vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.exit_circle{
-    width: 5.5vw;
-    height: 6.35vw;
-    position: absolute;
-    top:31.66vw;
-    left:47.26vw;
-}
-
-.circle-1{
-    position: absolute;
-    width: 6.3vw;
-    height: 6.6vw;
-    top: 15.1vw;
-    transition: 0.3s;
-}
-
-
-.circle-1:hover{
-    transform: scale(0.95);
-}
-
-.circle-1:nth-child(1){
-    left: 51.6vw;
-    top: 18.6vw;
-}
-
-.circle-1:nth-child(2){
-    left: 45.2vw;
-}
-
-.circle-1:nth-child(3) {
-    top: 14.94vw;
-    left: 49.5vw;
-}
-
-.circle-1:nth-child(4){
-    top: 18.75vw;
-    left: 43.1vw;
-}
-
-.circle-1:nth-child(5) {
-    top: 18.75vw;
-    left: 47.4vw;
-}
-
-.circle-1:nth-child(6) {
-    top: 15vw;
-    left: 53.7vw;
-}
-
-.circle-1:nth-child(7){
-    left:41vw;
-}
-
-.circle-1:nth-child(8){
-    left:41vw;
-
-}
-
-.circle-1:nth-child(9){
-    left: 45.2vw;
-}
-
-.circle-1:nth-child(10) {
-    top: 14.94vw;
-    left: 49.5vw;
-}
-
-.circle-1:nth-child(11){
-    top: 18.75vw;
-    left: 43.1vw;
-}
-
-.circle-1:nth-child(12) {
-    top: 18.75vw;
-    left: 47.4vw;
-}
-
-.circle-1:nth-child(13) {
-    top: 15vw;
-    left: 53.7vw;
-}
-
-.circle-1:nth-child(14){
-    left: 51.6vw;
-    top: 18.75vw;
-}
-
-.circle-1:nth-child(15){
-    left:41vw;
-
-}
-
-.circle-1:nth-child(16){
-    left: 45.2vw;
-}
-
-.circle-1:nth-child(17) {
-    top: 14.94vw;
-    left: 49.5vw;
-}
-
-.circle-1:nth-child(18){
-    top: 18.75vw;
-    left: 43.1vw;
-}
-
-.circle-1:nth-child(19) {
-    top: 18.75vw;
-    left: 47.4vw;
-}
-
-.circle-1:nth-child(20) {
-    top: 15vw;
-    left: 53.7vw;
-}
-
-.circle-1:nth-child(21){
-    left: 51.6vw;
-    top: 18.75vw;
-}
-
-
-.ex{
-    position: absolute;
-    width: 5.5vw;
-    height: 6.35vw;
-    left: 47.4vw;
-    top: 26.5vw;
-    transition: 0.3s;
-
-}
-
-.circle_svg{
-    position: absolute;
-    width: 5.5vw;
-    height: 6.25vw;
-    left: 0.35vw;
-    top: 0.15vw;
-    transition: 0.3s;
-}
-
-.circle_inside{
-    fill: #25262E;
-    transition:0.3s
-}
-
-
-.circle_border{
-    stroke:white
-}
-
-.exit-text{
-    position: absolute;
-    width: 5.5vw;
-    top:35.06vw;
-    left:47.26vw;
-    text-align: center;
-    color: white;
-
-    font-family: inter;
-    font-size: 0.49vw;
-}
-
-.icon{
-    position: absolute;
-    color:white;
-    top: 2.2vw;
-    font-size: 1.4vw;
-    text-align:center;
-    width:5.2vw;
-    left:0.5vw;
-}
-
-.main_icon{
-    position: absolute;
-    color:white;
-    left:49.3vw;
-    top: 23vw;
-    font-size: 1.4vw; 
-}
-
-.circle-text{
-    position: absolute;
-    width: 5.4vw;
-    text-align: center;
-    color:white;
-    top: 3.4vw;
-    left:0.4vw;
-    font-family: inter;
-    font-size: 0.49vw;
-}
-
-.maincircle-text{
-    position: absolute;
-    width: 5.5vw;
-    top:24.3vw;
-    left:47.26vw;
-    text-align: center;
-    color: white;
-    font-family: inter;
-    font-size: 0.49vw;
-}
-
-.next-page{
-    position: absolute;
-    width: 5.5vw;
-    height: 6.35vw;
-    top: 26.7vw;
-    left: 49.6vw;
-    transition: 0.3s;
-    display: none;
-}
-
-.back-page{
-    position: absolute;
-    width: 5.5vw;
-    height: 6.35vw;
-    top: 26.7vw;
-    left: 45.3vw;
-    transition: 0.3s;
-    display: none;
-}
-
-.combination-1{
-    position:absolute;
-    display: none;
-    top:4.5vw;
-}
-
-.combination-2{
-        position:absolute;
-    display: none;
-    top:4.5vw;
-}
-
-.circle-2{
-    position: absolute;
-    width: 6.3vw;
-    height: 6.6vw;
-    top: 15.1vw;
-    transition: 0.3s;
-}
-
-
-.circle-2:hover{
-    transform: scale(0.95);
-}
-
-.circle-2:nth-child(1){
-    left: 51.6vw;
-    top: 18.6vw;
-}
-
-.circle-2:nth-child(2){
-    left: 45.2vw;
-}
-
-.circle-2:nth-child(3) {
-    top: 14.94vw;
-    left: 49.5vw;
-}
-
-.circle-2:nth-child(4){
-    top: 18.75vw;
-    left: 43.1vw;
-}
-
-.circle-2:nth-child(5) {
-    top: 18.75vw;
-    left: 47.4vw;
-}
-
-.circle-2:nth-child(6) {
-    top: 15vw;
-    left: 53.7vw;
-}
-
-.circle-2:nth-child(7){
-    left:41vw;
-}
-
-.circle-2:nth-child(8){
-    left:41vw;
-
-}
-
-.circle-2:nth-child(9){
-    left: 45.2vw;
-}
-
-.circle-2:nth-child(10) {
-    top: 14.94vw;
-    left: 49.5vw;
-}
-
-.circle-2:nth-child(11){
-    top: 18.75vw;
-    left: 43.1vw;
-}
-
-.circle-2:nth-child(12) {
-    top: 18.75vw;
-    left: 47.4vw;
-}
-
-.circle-2:nth-child(13) {
-    top: 15vw;
-    left: 53.7vw;
-}
-
-.circle-2:nth-child(14){
-    left: 51.6vw;
-    top: 18.75vw;
-}
-
-.circle-2:nth-child(15){
-    left:41vw;
-
-}
-
-.circle-2:nth-child(16){
-    left: 45.2vw;
-}
-
-.circle-2:nth-child(17) {
-    top: 14.94vw;
-    left: 49.5vw;
-}
-
-.circle-2:nth-child(18){
-    top: 18.75vw;
-    left: 43.1vw;
-}
-
-.circle-2:nth-child(19) {
-    top: 18.75vw;
-    left: 47.4vw;
-}
-
-.circle-2:nth-child(20) {
-    top: 15vw;
-    left: 53.7vw;
-}
-
-.circle-2:nth-child(21){
-    left: 51.6vw;
-    top: 18.75vw;
-}
-
-
-img {
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    user-drag: none;
-}
-
-*:not(input):not(textarea) {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    -ms-user-select: none;
-    user-select: none
-}
-
-.red{
-    fill: #db3737;
-}
-
-svg.item g.icon-container path.hover-ef {
-    stroke: url(#paint1_radial_357_379);
-    fill: url(#paint0_radial_357_379);
-    fill-opacity: 0.85;
-    stroke-opacity: 0.25;
-    transition: none;
-}
-
-
 
 .Box {
     position: absolute;
-    width: 4.5vw;
-    height: 4.5vw;
+    width: 3.5vw;
+    height: 3.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.0521vw;
-    flex-direction: column;
-  }
-  
-  .boxBg {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.Box:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.boxBg {
     position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    fill: #20232f;
-    stroke: #54565c;
-    stroke-width: 0.0521vw !important;
-    stroke-opacity: 0.8;
-  }
-  
-  .iconSVG {
-    z-index: 3;
-    width: 1.9792vw;
-    height: 1.9792vw;
-    fill: white;
-    fill-opacity: 1;
-  }
-  
-  .boxText {
-    font-weight: lighter;
-    font-size: 0.4vw;
-    width: 39%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    z-index: 4;
-    color: rgba(255, 255, 255, 0.39);
-    font-family: inter;
-    display: flex;
-  }
-  
-  .hoverBg {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 0.5vw;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+    position: relative;
+    color: white;
+    font-size: 1.2vw;
     z-index: 2;
-    visibility: hidden;
+}
+
+.boxText {
     position: absolute;
-  }
-  
-  .Box:hover .hoverBg {
-    visibility: visible;
-  }
-  
-  .Box:hover {
-    cursor: pointer;
-  }
-  
-  .Box:hover .boxText {
+    bottom: -1.5vw;
     color: white;
-  }
-  
-  .animetBg {
-    visibility: hidden;
-    z-index: 1;
-    position: absolute;
-  }
-  
-  @keyframes animetBG {
-    0% {
-      width: 2.9688vw;
-      height: 100%;
-    }
-    100% {
-      width: 2.9688vw;
-      height: 6.3542vw;
-    }
-  }
-  
-  .Box:hover .animetBg {
-    visibility: visible;
-    animation: animetBG 0.3s ease-in-out;
-  }
-  
-  .boxAll .boxBG {
-    opacity: 0.6;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100% !important;
-    height: 100% !important;
-  }
-  
-  @keyframes animetbg2 {
-    0% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .boxAll:hover .boxBG {
-    animation: animetbg2 0.3s ease-in-out;
-    animation-fill-mode: forwards;
-  }
-  
-  .icon {
-    position: absolute;
-    color: white;
-    font-size: 1.4vw;
+    font-family: inter;
+    font-size: 0.7vw;
     text-align: center;
-    width: 5.2vw;
-    z-index: 5;
-    left: -0.3vw;
-    top: 1vw;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(-0.5vw);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.eyes{
-    cursor: pointer;
-    display: none;
+.Box:hover .boxText {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Radial Layout */
+.circle-2 {
     position: absolute;
-    left: 45vw;
-    width: 5.5vw;
-    height: 4.35vw;
-    /* width: 10vw; */
-    left: 46.88vw;
-    top: 19vw;
-    transition: 0.3s;
-    /* height: 10vw; */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.eyes:hover{
-    transform: scale(0.95);
+.circle-2:nth-child(1) { transform: translate(4vw, 0) rotate(0deg); }
+.circle-2:nth-child(2) { transform: translate(2.8vw, -2.8vw) rotate(0deg); }
+.circle-2:nth-child(3) { transform: translate(0, -4vw) rotate(0deg); }
+.circle-2:nth-child(4) { transform: translate(-2.8vw, -2.8vw) rotate(0deg); }
+.circle-2:nth-child(5) { transform: translate(-4vw, 0) rotate(0deg); }
+.circle-2:nth-child(6) { transform: translate(-2.8vw, 2.8vw) rotate(0deg); }
+.circle-2:nth-child(7) { transform: translate(0, 4vw) rotate(0deg); }
+.circle-2:nth-child(8) { transform: translate(2.8vw, 2.8vw) rotate(0deg); }
+
+.next-page, .back-page {
+    position: absolute;
+    bottom: 2vw;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.next-page { right: 2vw; }
+.back-page { left: 2vw; }
+
+/* Animation for menu appearance */
+@keyframes menuAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.combination-1, .combination-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: menuAppear 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Exit button styling */
+.ex {
+    position: absolute;
+    bottom: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exitBox {
+    background: rgba(220, 38, 38, 0.8);
+    border-radius: 0.5vw;
+}
+
+.exitBox:hover {
+    background: rgba(220, 38, 38, 1);
 }
