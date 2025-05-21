@@ -1,108 +1,23 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>qb-radialmenu</title>
+    <title>Radial Menu</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <script src="main.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-
 <body>
-    <div class="next-page">
-        <div class="Box exitBox boxAll">
-            <i class="fa fa-angle-right" style="position: absolute;
-            color: white;
-            top: 0.7vw;
-            font-size: 1.2vw;
-            text-align: center;
-            left: 2.3vw;
-            z-index: 5;"></i> 
-            <i class="fa fa-angle-right" style="    position: absolute;
-            color: rgb(255 255 255 / 50%);
-            top: 0.7vw;
-            font-size: 1.2vw;
-            text-align: center;
-            left: 1.6vw;
-            z-index: 5;"></i> 
-            <h2 class="boxText" style="margin-top: 47%;width: 26%;text-align: center;">Next Page</h2>
-            <svg xmlns="http://www.w3.org/2000/svg" class="boxBG" viewBox="0 0 86 98" fill="none">
-              <path d="M40 1.73205C41.8564 0.660254 44.1436 0.660254 46 1.73205L82.4352 22.7679C84.2916 23.8397 85.4352 25.8205 85.4352 27.9641V70.0359C85.4352 72.1795 84.2916 74.1603 82.4352 75.2321L46 96.2679C44.1436 97.3397 41.8564 97.3397 40 96.2679L3.56475 75.2321C1.70835 74.1603 0.564754 72.1795 0.564754 70.0359V27.9641C0.564754 25.8205 1.70835 23.8397 3.56475 22.7679L40 1.73205Z" fill="url(#paint0_radial_2404_55)"/>
-              <defs>
-                <radialGradient id="paint0_radial_2404_55" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(43 49) rotate(90) scale(61.5)">
-                  <stop stop-color="#1367A9"/>
-                  <stop offset="1" stop-color="#0D3457"/>
-                </radialGradient>
-              </defs>
-            </svg>
-          </div>
-    </div>
-
-    <div class="back-page">
-        <div class="Box exitBox boxAll">
-            <i class="fa fa-angle-left" style="position: absolute;
-            color: white;
-            top: 0.7vw;
-            font-size: 1.2vw;
-            text-align: center;
-            left: 2.3vw;
-            z-index: 5;"></i> 
-            <i class="fa fa-angle-left" style="    position: absolute;
-            color: rgb(255 255 255 / 50%);
-            top: 0.7vw;
-            font-size: 1.2vw;
-            text-align: center;
-            left: 1.6vw;
-            z-index: 5;"></i> 
-            <h2 class="boxText" style="margin-top: 47%;width: 26%;text-align: center;">Previous Page</h2>
-            <svg xmlns="http://www.w3.org/2000/svg" class="boxBG" viewBox="0 0 86 98" fill="none">
-              <path d="M40 1.73205C41.8564 0.660254 44.1436 0.660254 46 1.73205L82.4352 22.7679C84.2916 23.8397 85.4352 25.8205 85.4352 27.9641V70.0359C85.4352 72.1795 84.2916 74.1603 82.4352 75.2321L46 96.2679C44.1436 97.3397 41.8564 97.3397 40 96.2679L3.56475 75.2321C1.70835 74.1603 0.564754 72.1795 0.564754 70.0359V27.9641C0.564754 25.8205 1.70835 23.8397 3.56475 22.7679L40 1.73205Z" fill="url(#paint0_radial_2404_25)"/>
-              <defs>
-                <radialGradient id="paint0_radial_2404_25" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(43 49) rotate(90) scale(61.5)">
-                  <stop stop-color="#700470"/>
-                  <stop offset="1" stop-color="#b305b3"/>
-                </radialGradient>
-              </defs>
-            </svg>
-          </div>
-    </div>
-
-    <!-- <div class="next-page"> -->
-        <!-- <div class="circle-111 delete">
-            <svg class="circle_svg" width="105" height="121" viewBox="0 0 105 121" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="circle_inside" d="M52.5 0L0 30V91L52.5 121L105 91V30L52.5 0Z" fill="black" fill-opacity="0.83"/>
-                <path class="circle_border" d="M1 90.4197V30.5803L52.5 1.15175L104 30.5803V90.4197L52.5 119.848L1 90.4197Z" stroke="white" stroke-opacity="0.14" stroke-width="2"/>
-            </svg> 
-            <i class="fa fa-chevron-right icon"></i>
-            <p class="circle-text">Next Page</p>
-        </div> -->
-    <!-- </div> -->
-
-    <!-- <div class="back-page">
-        <div class="circle-222 delete">
-            <svg class="circle_svg" width="105" height="121" viewBox="0 0 105 121" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="circle_inside" d="M52.5 0L0 30V91L52.5 121L105 91V30L52.5 0Z" fill="black" fill-opacity="0.83"/>
-                <path class="circle_border" d="M1 90.4197V30.5803L52.5 1.15175L104 30.5803V90.4197L52.5 119.848L1 90.4197Z" stroke="white" stroke-opacity="0.14" stroke-width="2"/>
-            </svg> 
-            <i class="fa fa-chevron-left icon"></i>
-            <p class="circle-text">Back Page</p>
+    <div class="container">
+        <div class="combination-1">
+            <div class="circleArea"></div>
         </div>
-    </div> -->
-
-    
-    <div class="combination-1">
-        <!-- <div class="circleArea"></div> -->
-
-    </div>
-
-    <div class="combination-2">
-        <div class="circleArea"></div>
+        <div class="combination-2">
+            <div class="circleArea"></div>
+        </div>
     </div>
 </body>
 </html>

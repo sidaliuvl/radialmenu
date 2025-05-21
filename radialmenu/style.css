@@ -5,12 +5,12 @@
 
 body {
     overflow: hidden;
-    transform: scale(1);
+    margin: 0;
+    padding: 0;
     background: transparent;
 }
 
-.circleArea {
-    position: absolute;
+.container {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -18,38 +18,39 @@ body {
     align-items: center;
 }
 
+.circleArea {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+}
+
 .Box {
     position: absolute;
-    width: 3.5vw;
-    height: 3.5vw;
+    width: 4vw;
+    height: 4vw;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 0.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: scale(1);
-    opacity: 1;
+    transform-origin: center;
 }
 
 .Box:hover {
     transform: scale(1.1);
-    filter: brightness(1.2);
-}
-
-.boxBg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    border-radius: 0.5vw;
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .icon {
-    position: relative;
     color: white;
-    font-size: 1.2vw;
-    z-index: 2;
+    font-size: 1.5vw;
+    transition: all 0.3s ease;
+}
+
+.Box:hover .icon {
+    transform: scale(1.1);
 }
 
 .boxText {
@@ -57,13 +58,13 @@ body {
     bottom: -1.5vw;
     color: white;
     font-family: inter;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
     text-align: center;
+    opacity: 0;
+    transform: translateY(0.5vw);
+    transition: all 0.3s ease;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     white-space: nowrap;
-    opacity: 0;
-    transform: translateY(-0.5vw);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .Box:hover .boxText {
@@ -71,35 +72,59 @@ body {
     transform: translateY(0);
 }
 
-/* Radial Layout */
 .circle-2 {
     position: absolute;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.circle-2:nth-child(1) { transform: translate(4vw, 0) rotate(0deg); }
-.circle-2:nth-child(2) { transform: translate(2.8vw, -2.8vw) rotate(0deg); }
-.circle-2:nth-child(3) { transform: translate(0, -4vw) rotate(0deg); }
-.circle-2:nth-child(4) { transform: translate(-2.8vw, -2.8vw) rotate(0deg); }
-.circle-2:nth-child(5) { transform: translate(-4vw, 0) rotate(0deg); }
-.circle-2:nth-child(6) { transform: translate(-2.8vw, 2.8vw) rotate(0deg); }
-.circle-2:nth-child(7) { transform: translate(0, 4vw) rotate(0deg); }
-.circle-2:nth-child(8) { transform: translate(2.8vw, 2.8vw) rotate(0deg); }
+/* Radial positioning for 8 items */
+.circle-2:nth-child(1) { transform: translate(8vw, 0); }
+.circle-2:nth-child(2) { transform: translate(5.66vw, -5.66vw); }
+.circle-2:nth-child(3) { transform: translate(0, -8vw); }
+.circle-2:nth-child(4) { transform: translate(-5.66vw, -5.66vw); }
+.circle-2:nth-child(5) { transform: translate(-8vw, 0); }
+.circle-2:nth-child(6) { transform: translate(-5.66vw, 5.66vw); }
+.circle-2:nth-child(7) { transform: translate(0, 8vw); }
+.circle-2:nth-child(8) { transform: translate(5.66vw, 5.66vw); }
+
+.ex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(220, 38, 38, 0.9);
+}
+
+.ex:hover {
+    background: rgb(220, 38, 38);
+}
 
 .next-page, .back-page {
-    position: absolute;
+    position: fixed;
     bottom: 2vw;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 3vw;
+    height: 3vw;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .next-page { right: 2vw; }
 .back-page { left: 2vw; }
 
-/* Animation for menu appearance */
-@keyframes menuAppear {
+.next-page:hover, .back-page:hover {
+    background: rgba(0, 0, 0, 0.95);
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: scale(0.8);
+        transform: scale(0.9);
     }
     to {
         opacity: 1;
@@ -112,23 +137,5 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: menuAppear 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Exit button styling */
-.ex {
-    position: absolute;
-    bottom: 2vw;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.exitBox {
-    background: rgba(220, 38, 38, 0.8);
-    border-radius: 0.5vw;
-}
-
-.exitBox:hover {
-    background: rgba(220, 38, 38, 1);
+    animation: fadeIn 0.3s ease-out forwards;
 }
